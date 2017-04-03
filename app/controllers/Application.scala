@@ -9,4 +9,7 @@ class Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
+  def redirectDocs = Action {
+    Redirect("/assets/lib/swagger-ui/index.html?/url=http://localhost:9000/swagger.json")
+  }
 }
